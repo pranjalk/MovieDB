@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="popup.js"></script>
+        <title>IMDb Data</title>
+        <style>
+        #full-box {
+            width: 300px;
+            height: 180px;
+            position: relative;
+            padding: 10px;
+            overflow: hidden;
+            /* Styles */
+            border-radius: 0.4em;
+            border: 1.5px solid #3AC0FF;
+	         }
+        #poster-box{
+             float: left;
+             margin-top: 10px;
+             margin-left: 10px;
+             margin-right: 5px;
+             margin-bottom: 10px;
+             position: relative;
+             top: -10px;
+             left: -10px;
+            }
+        #moviePoster {
+              height:180px;
+              width: 120px;
+              position: relative;
+            }
+        #data-box{
+              margin-left: 10px;
+              margin-top: 0px;
+              margin-bottom: 0px;
+              margin-right: 0px;
+              width: 170px;
+              height: 170px;
+              position: relative;
+              top: 0px;
+              left: 120px;
+            }
+           #movieTitle {
+             font-size: 30px;
+             position: relative;
+             top: -210px;
+             left: 0px;
+           }
+           #titleRating {
+             font-size: 20px;
+             position: relative;
+             top: -240px;
+           }
+           #rating-denominator {
+             font-size: 20px;
+             position: relative;
+             top: -284px;
+             left:30px;
+           }
+        </style>
+    </head>
+    <body id="full-box">
+        <div id="poster-box">
+          <img id="moviePoster" src= "">
+        </div>
+        <div id="data-box">
+            <p id="movieTitle"></p>
+            <p id="titleRating"></p>
+            <p id="rating-denominator">/10</p>
+      </div>
+    </body>
+</html>
