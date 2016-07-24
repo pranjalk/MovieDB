@@ -5,7 +5,7 @@
         <script src="popup.js"></script>
         <title>IMDb Data</title>
         <style>
-        #full-box {
+        .main-container {
             width: 300px;
             height: 180px;
             position: relative;
@@ -15,59 +15,63 @@
             border-radius: 0.4em;
             border: 1.5px solid #3AC0FF;
 	         }
-        #poster-box{
+        .poster-box{
              float: left;
-             margin-top: 10px;
-             margin-left: 10px;
-             margin-right: 5px;
-             margin-bottom: 10px;
              position: relative;
-             top: -10px;
-             left: -10px;
+             height: 100%;
+             width: 40%;
+             z-index: 3;
             }
         #moviePoster {
-              height:180px;
-              width: 120px;
+              height: 100%;
+              width: 100%;
               position: relative;
             }
-        #data-box{
-              margin-left: 10px;
-              margin-top: 0px;
-              margin-bottom: 0px;
-              margin-right: 0px;
-              width: 170px;
-              height: 170px;
+        .data-container{
+              width: auto;
+              height: 100%;
               position: relative;
-              top: 0px;
-              left: 120px;
             }
-           #movieTitle {
-             font-size: 30px;
+        .imdbTitle {
+             font-size: 25px;
              position: relative;
-             top: -210px;
-             left: 0px;
+             margin: 5px;
+             padding: 3px;
            }
-           #titleRating {
+           .dataPrint {
              font-size: 20px;
              position: relative;
-             top: -240px;
+             margin-left: 5px;
+             padding-left: 3px;
+
            }
            #rating-denominator {
              font-size: 20px;
              position: relative;
-             top: -284px;
-             left:30px;
+           }
+           #in-between {
+             font-size: 16px;
+             position: relative;
+             margin-left: 2px;
            }
         </style>
     </head>
-    <body id="full-box">
-        <div id="poster-box">
+    <body class="main-container" id="main-body">
+        <div class="poster-box" id="poster">
           <img id="moviePoster" src= "">
         </div>
-        <div id="data-box">
-            <p id="movieTitle"></p>
-            <p id="titleRating"></p>
-            <p id="rating-denominator">/10</p>
-      </div>
+        <div id="data-box" class="data-container">
+            <span id="movieTitle" class="imdbTitle"></span>
+            <br>
+            <span id="titleRating" class="dataPrint"></span>
+            <span id="rating-denominator" >/10</span>
+            <br>
+            <span id="numberVotes" class="dataPrint"></span>
+            <span id="in-between">Votes</span>
+            <br>
+            <span id="releaseDate" class="dataPrint"></span>
+            <br>
+            <spane id="genre" class="dataPrint"></span>
+        </div>
     </body>
 </html>

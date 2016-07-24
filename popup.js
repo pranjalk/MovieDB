@@ -15,5 +15,9 @@ chrome.tabs.executeScript( {
   console.log(result);
   document.getElementById("titleRating").innerHTML = result.imdbRating; // imdbRating
   document.getElementById("movieTitle").innerHTML = result.Title; // imdbTitle
-  document.getElementById("moviePoster").src = result.Poster;
+  document.getElementById("moviePoster").src = result.Poster; //imdbPoster
+  document.getElementById("numberVotes").innerHTML = result.imdbVotes; //imdbVotes
+  document.getElementById("releaseDate").innerHTML = result.Released; //imdbVotes
+  document.getElementById("genre").innerHTML = result.Genre; //imdbVotes
+
 });
