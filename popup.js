@@ -13,11 +13,11 @@ chrome.tabs.executeScript( {
   xhttp.send();
   var result = JSON.parse(xhttp.responseText);
   console.log(result);
-  document.getElementById("titleRating").text = result.imdbRating; // imdbRating
-  document.getElementById("movieTitle").text = result.Title; // imdbTitle
+  document.getElementById("titleRating").innerHTML = result.imdbRating; // imdbRating
+  document.getElementById("movieTitle").innerHTML = result.Title; // imdbTitle
   document.getElementById("moviePoster").src = result.Poster; //imdbPoster
-  document.getElementById("numberVotes").text = result.imdbVotes; //imdbVotes
-  document.getElementById("releaseDate").text = result.Released; //imdbVotes
-  document.getElementById("genre").text = result.Genre; //imdbVotes
+  document.getElementById("numberVotes").innerHTML = result.imdbVotes; //imdbVotes
+  document.getElementById("releaseDate").innerHTML = result.Released; //imdbVotes
+  document.getElementById("genre").innerHTML = result.Genre; //imdbVotes
 
 });
